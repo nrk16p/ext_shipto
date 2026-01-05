@@ -78,7 +78,7 @@ def fetch_ship_to(customer_id: str) -> pd.DataFrame:
         data=payload,
         headers=ATMS_HEADERS,
         verify=False,
-        timeout=(10, 300)   # connect / read
+        timeout=(10, 300000)   # connect / read
     )
 
     resp.raise_for_status()
